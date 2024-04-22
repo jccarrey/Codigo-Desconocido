@@ -1,0 +1,5 @@
+show dbs
+show collections
+use test
+show collections
+use admin

@@ -1,41 +1,15 @@
-gggversion: '3.7'
+version: '3.8'
 services:
-  db:
-    image: mysql:latest
-    restart: unless-stopped
+  mongo:
+    image: mongo:latest
+    restart: always
+    container_name: mongo-app
+    hostname: mongo-app
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD} 
-      MYSQL_PASSWORD: ${DB_PASSWORD} 
-      MYSQL_USER: ${DB_USERNAME}
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
-    volumes:      
-      - ./db_data:/var/lib/mysql
-  phpmyadmin:
-    image: phpmyadmin
-    links:
-      - db
-    environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD} 
-      MYSQL_PASSWORD: ${DB_PASSWORD} 
-      MYSQL_USER: ${DB_USERNAME}
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
-    restart: unless-stopped
-    ports:
-      - 8082:80
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: cdpi2024
     volumes:
-      - ./db/data:/var/lib/mysql
-  nginx:
-    image: nginx:latest
-    restart: unless-stopped #reiniciar a menos que la apaguemos
+      - ./data:/data/db
+      - ./data/log:/var/log/mongodb/
     ports:
-      - 8080:80
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-volumes:
-  db_data:
+      - "27017:27017"
