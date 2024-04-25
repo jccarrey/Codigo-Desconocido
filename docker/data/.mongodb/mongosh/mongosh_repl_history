@@ -1,3 +1,100 @@
+db.bookings.find()
+db.escaperooms.find()
+db.escaperroms.find()
+db.clients.find()
+use codigodesconocido
+exitç
+db.bookings.insertOne({id_user:"662a16f131853e99f3c934dd",id_escaperoom:"662a16f431853e99f3c934de",date:"24/04/2024",hour:"16:00"})
+db.escaperooms.insertOne({name:"Ejemplo_Scaperoom",description:"Esto es un ejemplo de escaperoom",schedules:["16:00","17:00","18:00","19:00","20:00"],open_days:["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]})
+db.clients.insertOne({ name: "Ejemplo", role: "Admin", description: "Esto es un ejemplo de cliente", avatar: "", friends: [2] })
+use codigodesconocido
+db.bookings.deleteOne({ _id: ObjectId('662a165f106d526564c934df') })
+db.escaperooms.deleteOne({ _id: ObjectId('662a1640106d526564c934de') })
+db.clients.deleteOne({ _id: ObjectId('662a1637106d526564c934dd') })
+db.bookings.insertOne({id_user:"662a1637106d526564c934dd",id_escaperoom:"662a1640106d526564c934de",date:"24/04/2024",hour:"16:00"})
+db.escaperooms.insertOne({name:"Ejemplo_Scaperoom",description:"Esto es un ejemplo de escaperoom",schedules:["16:00","17:00","18:00","19:00","20:00"],open_days:["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]})
+db.clients.insertOne({ name: "Ejemplo", role: "Admin", description: "Esto es un ejemplo de cliente", avatar: "", friends: [2] })
+db.createCollection("escaperooms")
+db.createCollection("clients")
+db.createCollection("bookings")
+git config --global core.autocrlf false
+db.clients.find()
+db.clients.deleteOne({ _id: ObjectId('662a0cf2da3b507ac5c934df') })
+db.clients.find()
+db.clients.deleteOne({ _id: ObjectId('662a0eb2da3b507ac5c934e1') })
+db.clients.deleteOne({ _id: ObjectId('662a137f097546c61cc934df') })
+db.clients.deleteOne({_id:ObjectId('662a137f097546c61cc934df')})
+db.clients.deleteOne({_id:ObjectId("662a137f097546c61cc934df")})
+db.clients.deleteOne({ _id:ObjectId("662a137f097546c61cc934df")})
+db.clients.deleteOne({ _id:ObjectId("662a137f097546c61cc934df") })
+db.clients.deleteOne({ _id: ObjectId("662a137f097546c61cc934df") })
+db.coleccion.deleteOne({ _id: ObjectId("662a137f097546c61cc934df") })
+db.clients.find()
+db.clients.deleteOne({ _id: ObjectId("662a137f097546c61cc934df") })
+db.coleccion.deleteOne({ _id: ObjectId("662a137f097546c61cc934df") })
+db.coleccion.deleteOne({ _id: ObjectId("662a0cf2da3b507ac5c934df") })
+db.bookings.find(_id:"662a0cf2da3b507ac5c934df")
+db.bookings.find(_id:662a0cf2da3b507ac5c934df)
+db.clients.find()
+db.bookings.insertOne({id_user:"662a1357097546c61cc934dd",id_escaperoom:"662a1360097546c61cc934de",date:"24/04/2024",hour:"16:00"})
+db.escaperooms.insertOne({name:"Ejemplo_Scaperoom",description:"Esto es un ejemplo de escaperoom",schedules:["16:00","17:00","18:00","19:00","20:00"],open_days:["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]})
+db.clients.insertOne({ name: "Ejemplo", role: "Admin", description: "Esto es un ejemplo de cliente", avatar: "", friends: [2] })
+name: 'Ejemplo_Scaperoom', description: 'Esto es un ejemplo de escaperoom',
+db.clients.insertOne({_id: ObjectId('662a0eb2da3b507ac5c934e1'),})
+db.createCollection("bookings")
+db.createCollection("escaperooms")
+db.createCollection("clients")
+use codigodesconocido
+db.escaperooms.drop()
+db.bookings.drop()
+db.clients.drop()
+dbe.collections
+db.clients.find()
+db.createCollection("bookings")
+db.clients.find()
+db.bookings.insertOne({id_user:"662a11ef1202d3d92ec934dd",id_escaperoom:"662a12161202d3d92ec934de",date:"24/04/2024",hour:"16:00"})
+db.escaperooms.insertOne({name:"Ejemplo_Scaperoom",description:"Esto es un ejemplo de escaperoom",schedules:["16:00","17:00","18:00","19:00","20:00"],open_days:["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]})
+db.createCollection("escaperooms")
+db.createCollection("bookings")
+db.clients.insertOne({name:"Ejemplo",role:"Admin",description:"Esto es un ejemplo de cliente",avatar:"",friends:[2]})
+db.createCollection("clients")
+db.clients.find()
+exit
+db.bookings.find()
+db.escaperooms.find()
+db.clients.find()
+show collections
+db.bookings.insertOne({id_user:"662a0cf2da3b507ac5c934df",id_escaperoom:"662a0eb2da3b507ac5c934e1",date:"24/04/2024",hour:"16:00"})
+db.clients.deleteOne({ name: "Ejemplo_Scaperoom" })
+db.escaperooms.insertOne({name:"Ejemplo_Scaperoom",description:"Esto es un ejemplo de escaperoom",schedules:["16:00","17:00","18:00","19:00","20:00"],open_days:["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]})
+db.clients.insertOne({name:"Ejemplo_Scaperoom",description:"Esto es un ejemplo de escaperoom",schedules:["16:00","17:00","18:00","19:00","20:00"],open_days:["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]})
+db.createCollection("escaperooms")
+db.createCollection("bookings")
+db.clients.find()
+db.clients.insertOne({name:"Ejemplo",role:"Admin",description:"Esto es un ejemplo de cliente",avatar:"",friends:[2]})
+db.clients.deleteOne({ name: "Ejemplo" })
+db.clients.find()
+db.clients.insertOne({name:"Ejemplo",role:"Admin",id:1,description:"Esto es un ejemplo de cliente",avatar:"",friends:[2]})
+db.clients.deleteOne({ name: "Ejemplo" })
+db.clients.find()
+db.clients.deleteOne({ nombre: "Ejemplo" })
+db.clients.find()
+show collections
+db.clients.show
+ls
+db.clients.insertOne({name:"Ejemplo",role:"Admin",id:1,description:"Esto es un ejemplo de cliente",Avatar:"",Amigos:[2]})
+db.clients.insertOne({name:"Ejemplo",role:"Admin",id:1,description:"Esto es un ejemplo de cliente",Avatar:,Amigos:[2]})
+db.createCollection("clients")
+use codigodesconocido
+mongosh -u root -p --authenticationDatabase admin
+db.getUsers()
+use admin
+mongo -u root -p --authenticationDatabase admin
+db.createUser({ user: "admin", pwd: "password", roles: ["root"] })
+host
+db.createCollection("clients")
+use codigodesconocido
+mongo
 show dbs
 show collections
 use test
