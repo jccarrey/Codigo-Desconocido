@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Bad Signal';
+    src: url(../Assets/fonts/Bad\ Signal.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url(../Assets/fonts/BAHNSCHRIFT.TTF) format('truetype');
+}
+
+/* ------------------------------------ RESET ------------------------------------ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: black;
+    --secondary-color: #00623c;
+    --terciary-color: #b4e4ff
+}
+
+body {
+    font-family: Montserrat, "sans-serif";
+
+}
+
+.container {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* ------------------------------ CABECERA ------------------------------------ */
+
+
+header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+
+    z-index: 100000;
+    justify-content: space-between;
+    transition: 0.6s;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+
+
+/* ------------------------------------ LOGO ------------------------------------ */
+
+
+.logo {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 10vw;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    margin-left: 3vw;
+    margin-top: 0.2vh;
+    margin-bottom: 1vh;
+    /* transition: 0.6s; */
+}
+
+.logo img {
+    margin-top: 1vh;
+    width: 6em;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------ MENÚ ------------------------------------ */
+
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+    font-weight: 300;
+    margin-top: 4.5vh;
+}
+
+.list-nav {
+    position: relative;
+    display: flex;
+    margin-right: 2vw;
+}
+
+.list-nav li:not(:last-child) {
+    margin-right: 8vw;
+}
+
+.list-nav li {
+    position: relative;
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 0.557rem + 0.381vw, 0.9rem);
+    font-weight: 600;
+    list-style: none;
+    font-family: Bahnschrift, "sans serif";
+    margin-right: 4vw;
+}
+
+.list-nav li a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.list-nav li a:hover {
+    color: white;
+}
+
+.list-nav li a:hover::after {
+    width: 100%;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.5px;
+    padding: 0 6px;
+}
+
+.list-nav li a.active {
+    color: #EC7063;
+}
+
+.list-nav li a.active::after {
+    width: 100%;
+}
+
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+
+
+/* ------------------------------------ HERO ------------------------------------ */
+
+
+
+#hero-scaperooms {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+
+    background-image: url(../Assets/imagesScapeRooms/hero-scaperooms.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    /* background-attachment: fixed; */
+
+}
+
+
+/*----------------- TEXTO 1 -----------------*/
+
+
+.green {
+    position: absolute;
+    width: 30%;
+    top: 36%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
+    font-weight: 400;
+    font-family: 'Bad Signal';
+    letter-spacing: .2em;
+    animation: fadeIn 2s ease-in-out forwards;
+
+}
+
+
+/*----------------- TEXTO 2 -----------------*/
+
+
+.haven {
+    position: absolute;
+    width: 20%;
+    top: 51%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
+    font-weight: 400;
+    font-family: 'Bad Signal';
+    letter-spacing: .2em;
+    animation: fadeIn 2s ease-in-out forwards;
+
+}
+
+
+/*----------------- SCROLL -----------------*/
+
+
+.scroll-down {
+    position: absolute;
+    left: 90%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 100px;
+    background-color: transparent;
+    color: white;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.scroll-down p {
+    margin-top: 4vh;
+    margin-left: 1vw;
+}
+
+.scroll-down:before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, #fff, transparent);
+    animation: animate 2s linear infinite
+}
+
+@keyframes animate {
+    0% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+
+    50% {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+
+    51% {
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ------------------------------------ SECTION - 1 ------------------------------------ */
+
+.section-1-scaperooms {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 30vh;
+    /* background-color: #EC7063; */
+}
+
+.rectangulo-1-filtros-scaperooms {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+
+    width: 80vw;
+    height: fit-content;
+}
+
+#como {
+    font-size: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
+    color: black;
+    font-weight: 600;
+    font-family: Bahnschrift, "sans serif";
+    margin-bottom: 5vh;
+}
+
+.filtros-scaperooms {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    width: 80vw;
+    height: 13vh;
+
+    /* background-color: #bbb; */
+}
+
+#rectangulo-ubicacion {
+    background-color: #EC7063;
+    width: 14vw;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+
+    cursor: pointer;
+}
+
+#rectangulo-dificultad {
+    background-color: #EC7063;
+    width: 14vw;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+
+    cursor: pointer;
+}
+
+#rectangulo-tematica {
+    background-color: #EC7063;
+    width: 14vw;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+
+    cursor: pointer;
+}
+
+.buscar {
+    background-color: #EC7063;
+    width: 4vw;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+
+    cursor: pointer;
+}
+
+/* ------------------------------------ SECTION - 2 ------------------------------------ */
+
+
+.section-2-scaperooms {
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    /* background-color:grey; */
+    margin-top: 20vh;
+    margin-bottom: -17vh;
+}
+
+.lista-scaperooms {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: fit-content;
+
+    background-color: pink;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.card {
+
+}
+.cardcontainer .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cardcontainer .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.cardcontainer .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.cardcontainer .card:after {
+    content: '. ¿?';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 25, 0.05)
+}
+
+.cardcontainer .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.cardcontainer .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+
+}
+
+.cardcontainer .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-0deg);
+    width: 270px;
+}
+
+.cardcontainer .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.cardcontainer .card:hover .contentBx {
+    height: 210px;
+}
+
+.cardcontainer .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.cardcontainer .card .contentBx .size,
+.cardcontainer .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.cardcontainer .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.cardcontainer .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.cardcontainer .card .contentBx .size h3,
+.cardcontainer .card .contentBx .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.cardcontainer .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cardcontainer .card .contentBx .size span:hover {
+    background: #9bdc28;
+}
+
+.cardcontainer .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.cardcontainer .card .contentBx .color span:nth-child(2) {
+    background: #9bdc28;
+}
+
+.cardcontainer .card .contentBx .color span:nth-child(3) {
+    background: #03a9f4;
+}
+
+.cardcontainer .card .contentBx .color span:nth-child(4) {
+    background: #e91e63;
+}
+
+.cardcontainer .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+
+.cardcontainer .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}

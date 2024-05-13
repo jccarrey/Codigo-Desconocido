@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Letters from './HackLetters.js';
 import logo from '../Assets/imagesHero/logo.png'
 import cartel1 from '../Assets/imagesHero/cartel-1.png'
@@ -6,6 +7,7 @@ import cartel2 from '../Assets/imagesHero/cartel-2.png'
 import cartel3 from '../Assets/imagesHero/cartel-3.png'
 import cartel4 from '../Assets/imagesHero/cartel-4.png'
 import cartel5 from '../Assets/imagesHero/cartel-5.png'
+
 import './Home.css';
 
 export const handleSignInClick = () => {
@@ -116,20 +118,44 @@ export const Home = () => {
                             mentales, tu trabajo en equipo y tu capacidad para resolver enigmas en un entorno lleno de emoción y misterio.</p>
 
                     </div>
+                    <div class="carousel-container">
+                        <div className="galeria">
+                            <div className="slide" id="foto1">
+                                <img src={cartel1} alt="" />
+                            </div>
 
-                    <div className="galeria">
-                        <div className="fotos-galeria" id="foto1">
-                            <img src={cartel1} alt="" />
-                        </div>
+                            <div className="slide" id="foto2">
+                                <img src={cartel2} alt="" />
+                            </div>
 
-                        <div className="fotos-galeria" id="foto2">
-                            <img src={cartel2} alt="" />
-                        </div>
+                            <div className="slide" id="foto3">
+                                <img src={cartel3} alt="" />
+                            </div>
+                            <div className="slide" id="foto1">
+                                <img src={cartel4} alt="" />
+                            </div>
 
-                        <div className="fotos-galeria" id="foto3">
-                            <img src={cartel3} alt="" />
+                            <div className="slide" id="foto2">
+                                <img src={cartel5} alt="" />
+                            </div>
+
+                            <div className="slide" id="foto3">
+                                <img src={cartel3} alt="" />
+                            </div>
+                            <div className="slide" id="foto1">
+                                <img src={cartel1} alt="" />
+                            </div>
+
+                            <div className="slide" id="foto2">
+                                <img src={cartel2} alt="" />
+                            </div>
+
+                            <div className="slide" id="foto3">
+                                <img src={cartel3} alt="" />
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <Letters />
