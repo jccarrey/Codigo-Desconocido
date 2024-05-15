@@ -112,7 +112,168 @@ export const ScapeRooms = () => {
 
             <div className="section-2-scaperooms">
                 <div className="lista-scaperooms">
-                    <div className="cardcontainer">
+                    <div className="caja-scaperoom">
+                        <div className="imagen-scaperoom" id = "imagen-scaperoom-1">
+
+                        </div>
+
+                        <div className="info-scaperoom">
+                            <div className="nombre-scaperoom">
+                                <p>El hospital abandonado</p>
+                            </div>
+
+                            <div className="caracteristicas-scaperoom">
+                                <p>👤 2-3 Personas</p>
+                                <p>❌ Avanzado</p>
+                                <p>🔐 Encontrar</p>
+                            </div>
+
+                            <div className="descripcion-scaperoom">
+                                <p>Explora los pasillos olvidados de un hospital desolado, donde los susurros de los fantasmas del pasado te guiarán hacia la libertad. </p>
+                            </div>
+
+                            <div className="precio-y-reserva">
+                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <p>15€ / Persona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="caja-scaperoom">
+                        <div className="imagen-scaperoom" id = "imagen-scaperoom-2">
+
+                        </div>
+
+                        <div className="info-scaperoom">
+                            <div className="nombre-scaperoom">
+                                <p>El asesino siniestro</p>
+                            </div>
+
+                            <div className="caracteristicas-scaperoom">
+                                <p>👤 2-3 Personas</p>
+                                <p>❌ Avanzado</p>
+                                <p>🔐 Encontrar</p>
+                            </div>
+
+                            <div className="descripcion-scaperoom">
+                                <p>Adéntrate en la mente retorcida de un asesino en serie y descifra sus macabros rompecabezas para escapar de su mortal juego.</p>
+                            </div>
+
+                            <div className="precio-y-reserva">
+                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <p>15€ / Persona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="caja-scaperoom">
+                        <div className="imagen-scaperoom" id = "imagen-scaperoom-3">
+
+                        </div>
+
+                        <div className="info-scaperoom">
+                            <div className="nombre-scaperoom">
+                                <p>Desesperacion infinita</p>
+                            </div>
+
+                            <div className="caracteristicas-scaperoom">
+                                <p>👤 2-3 Personas</p>
+                                <p>❌ Avanzado</p>
+                                <p>🔐 Encontrar</p>
+                            </div>
+
+                            <div className="descripcion-scaperoom">
+                                <p>Sumérgete en una dimensión paralela donde el tiempo se distorsiona y cada segundo cuenta.</p>
+                            </div>
+
+                            <div className="precio-y-reserva">
+                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <p>15€ / Persona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="caja-scaperoom">
+                        <div className="imagen-scaperoom" id = "imagen-scaperoom-4">
+
+                        </div>
+
+                        <div className="info-scaperoom">
+                            <div className="nombre-scaperoom">
+                                <p>La cueva oscura</p>
+                            </div>
+
+                            <div className="caracteristicas-scaperoom">
+                                <p>👤 2-3 Personas</p>
+                                <p>❌ Avanzado</p>
+                                <p>🔐 Encontrar</p>
+                            </div>
+
+                            <div className="descripcion-scaperoom">
+                                <p>Descubre los secretos ocultos en las profundidades de una cueva misteriosa, donde las sombras esconden peligros inimaginables. </p>
+                            </div>
+
+                            <div className="precio-y-reserva">
+                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <p>15€ / Persona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="caja-scaperoom">
+                        <div className="imagen-scaperoom" id = "imagen-scaperoom-5">
+
+                        </div>
+
+                        <div className="info-scaperoom">
+                            <div className="nombre-scaperoom">
+                                <p>Escapa de la bestia</p>
+                            </div>
+
+                            <div className="caracteristicas-scaperoom">
+                                <p>👤 2-3 Personas</p>
+                                <p>❌ Avanzado</p>
+                                <p>🔐 Encontrar</p>
+                            </div>
+
+                            <div className="descripcion-scaperoom">
+                                <p>Enfréntate a una criatura de pesadilla en un juego de vida o muerte. </p>
+                            </div>
+
+                            <div className="precio-y-reserva">
+                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <p>15€ / Persona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="caja-scaperoom">
+                        <div className="imagen-scaperoom" id = "imagen-scaperoom-2">
+
+                        </div>
+
+                        <div className="info-scaperoom">
+                            <div className="nombre-scaperoom">
+                                <p>El asesino siniestro</p>
+                            </div>
+
+                            <div className="caracteristicas-scaperoom">
+                                <p>👤 2-3 Personas</p>
+                                <p>❌Avanzado</p>
+                                <p>🔐 Encontrar</p>
+                            </div>
+
+                            <div className="descripcion-scaperoom">
+                                <p>Adéntrate en la mente retorcida de un asesino en serie y descifra sus macabros rompecabezas para escapar de su mortal juego.</p>
+                            </div>
+
+                            <div className="precio-y-reserva">
+                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <p>15€ / Persona</p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className="cardcontainer">
                         <div class="card">
                             <div class="imgBx">
                                 <img src={cueva} alt="" />
@@ -248,8 +409,8 @@ export const ScapeRooms = () => {
                                 </div>
                                 <a href="#E">Buy Now</a>
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
                 </div>
             </div>
         </div>

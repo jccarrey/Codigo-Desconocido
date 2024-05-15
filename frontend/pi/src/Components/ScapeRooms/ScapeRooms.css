@@ -355,7 +355,7 @@ header {
 .scroll-down {
     position: absolute;
     left: 90%;
-    top: 75%;
+    top: 90%;
     transform: translate(-50%, -50%);
     width: 1px;
     height: 100px;
@@ -511,7 +511,7 @@ header {
     align-items: center;
 
     width: 100vw;
-    height: 100vh;
+    height: 170vh;
 
     /* background-color:grey; */
     margin-top: 20vh;
@@ -528,194 +528,136 @@ header {
     width: 80vw;
     height: fit-content;
 
-    background-color: pink;
+    /* background-color: pink; */
 }
 
-.cardcontainer {
+.caja-scaperoom {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
+    flex-flow: column wrap;
 
-.card {
-
-}
-.cardcontainer .card {
-    position: relative;
-    width: 320px;
-    height: 450px;
-    background: #232323;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.cardcontainer .card:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #9bdc28;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-
-.cardcontainer .card:hover:before {
-    clip-path: circle(300px at 80% -20%);
-}
-
-.cardcontainer .card:after {
-    content: '. ¿?';
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 25, 0.05)
-}
-
-.cardcontainer .card .imgBx {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
-}
-
-.cardcontainer .card:hover .imgBx {
-    top: 0%;
-    transform: translateY(0%);
-
-}
-
-.cardcontainer .card .imgBx img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-0deg);
-    width: 270px;
-}
-
-.cardcontainer .card .contentBx {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-}
-
-.cardcontainer .card:hover .contentBx {
-    height: 210px;
-}
-
-.cardcontainer .card .contentBx h2 {
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #fff;
-    margin: 0;
-}
-
-.cardcontainer .card .contentBx .size,
-.cardcontainer .card .contentBx .color {
-    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px;
-    transition: 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    padding-top: 0;
-    padding-bottom: 0;
+    align-content: center;
+
+    width: 25vw;
+    height: 60vh;
+
+    background-color: #e7edef;
+    margin-bottom: 5vh;
+
+    border-radius: 5px;
 }
 
-.cardcontainer .card:hover .contentBx .size {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.5s;
+.imagen-scaperoom {
+    width: 100%;
+    height: 60%;
+
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.cardcontainer .card:hover .contentBx .color {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.6s;
+#imagen-scaperoom-1 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-1.jpg);
 }
 
-.cardcontainer .card .contentBx .size h3,
-.cardcontainer .card .contentBx .color h3 {
-    color: #fff;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
+#imagen-scaperoom-2 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-2.jpg);
 }
 
-.cardcontainer .card .contentBx .size span {
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111;
-    background: #fff;
-    margin: 0 5px;
-    transition: 0.5s;
-    color: #111;
-    border-radius: 4px;
-    cursor: pointer;
+#imagen-scaperoom-3 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-3.png);
 }
 
-.cardcontainer .card .contentBx .size span:hover {
-    background: #9bdc28;
+#imagen-scaperoom-4 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-4.jpg);
 }
 
-.cardcontainer .card .contentBx .color span {
-    width: 20px;
-    height: 20px;
-    background: #ff0;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+#imagen-scaperoom-5 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-5.jpg);
 }
 
-.cardcontainer .card .contentBx .color span:nth-child(2) {
-    background: #9bdc28;
+/* #imagen-scaperoom-6 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-7.png);
+} */
+/* 
+#imagen-scaperoom-7 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-1.png);
 }
 
-.cardcontainer .card .contentBx .color span:nth-child(3) {
-    background: #03a9f4;
+#imagen-scaperoom-8 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-1.png);
 }
 
-.cardcontainer .card .contentBx .color span:nth-child(4) {
-    background: #e91e63;
+#imagen-scaperoom-9 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-1.png);
 }
 
-.cardcontainer .card .contentBx a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #fff;
-    border-radius: 4px;
-    margin-top: 10px;
-    text-decoration: none;
+#imagen-scaperoom-10 {
+    background-image: url(../Assets/imagesScapeRooms/cartel-scaperoom-1.png);
+} */
+
+.info-scaperoom {
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-around;
+    /* align-items: center;
+    align-content: center; */
+
+    width: 90%;
+    height: 40%;
+    /* background-color: bisque; */
+}
+
+.nombre-scaperoom {
+    
+}
+
+.nombre-scaperoom p {
+    font-size: clamp(1.23rem, 1.037rem + 0.514vw, 1.5rem);
+    color: black;
     font-weight: 600;
-    color: #111;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.5s;
-    margin-top: 0;
+    font-family: Bahnschrift, "sans serif";
 }
 
-.cardcontainer .card:hover .contentBx a {
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: 0.75s;
+.caracteristicas-scaperoom {
+    display: flex;
+    flex-flow: row wrap;
 
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.caracteristicas-scaperoom p {
+    width: 8em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 8px;
+    background-color: #d3d0d0;
+    font-size: clamp(0.85rem, 0.779rem + 0.19vw, 0.95rem);
+    font-family: Montserrat, "sans-serif";
+}
+
+.descripcion-scaperoom p{
+    line-height: 1.4em;
+    font-size: clamp(0.76rem, 0.617rem + 0.381vw, 0.96rem);
+}
+
+.precio-y-reserva {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+#reserva-ahora {
+    font-size: clamp(0.76rem, 0.617rem + 0.381vw, 0.96rem);
+    font-weight: 500;
+    cursor: pointer;
 }
