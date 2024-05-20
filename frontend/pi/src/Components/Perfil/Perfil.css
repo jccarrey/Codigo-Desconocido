@@ -1,0 +1,185 @@
+/* ------------------------------ CABECERA ------------------------------------ */
+
+
+#header-perfil {
+    position: absolute;
+    display: flex;
+    width: 100%;
+
+    z-index: 100000;
+    justify-content: space-between;
+    transition: 0.6s;
+    animation: fadeIn 2s ease-in-out forwards;
+
+    background-color: rgb(205, 205, 205);
+}
+
+
+
+/* ------------------------------------ LOGO ------------------------------------ */
+
+
+.logo {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 10vw;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    margin-left: 3vw;
+    margin-top: 0.2vh;
+    margin-bottom: 1vh;
+    /* transition: 0.6s; */
+}
+
+.logo img {
+    margin-top: 1vh;
+    width: 6em;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------ MENÚ ------------------------------------ */
+
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+    font-weight: 300;
+    margin-top: 4.5vh;
+}
+
+.list-nav {
+    position: relative;
+    display: flex;
+    margin-right: 2vw;
+}
+
+.list-nav li:not(:last-child) {
+    margin-right: 8vw;
+}
+
+.list-nav li {
+    position: relative;
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 0.557rem + 0.381vw, 0.9rem);
+    font-weight: 600;
+    list-style: none;
+    font-family: Bahnschrift, "sans serif";
+    margin-right: 4vw;
+}
+
+.list-nav li a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.list-nav li a:hover {
+    color: white;
+}
+
+.list-nav li a:hover::after {
+    width: 100%;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.5px;
+    padding: 0 6px;
+}
+
+.list-nav li a.active {
+    color: #EC7063;
+}
+
+.list-nav li a.active::after {
+    width: 100%;
+}
+
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+/* ---------------------------------- SECTION 1 ------------------------------- */
+
+
+.section-1-info-user-perfil {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 120vh;
+
+    background-color: rgb(88, 153, 153);
+}
+
+.perfil-1er-div {
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: 40vh;
+    
+    background-color: coral;
+}
+
+.foto-user {
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+
+    background-image: url(../Assets/imagesBookNow/image-scape-room-asesino-book.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.perfil-2do-div {
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: 40vh;
+    
+    margin-top: 5vh;
+
+    background-color: rgb(245, 212, 199);
+}
+
+
+.info-user input[type="text"],
+.info-user input[type="email"] {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* Fondo grisaceo */
+    color: #000; /* Texto negro */
+    width: 100%; /* Ocupar todo el ancho disponible */
+}

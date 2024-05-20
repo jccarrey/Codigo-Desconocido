@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import logo from '../Assets/imagesHero/logo.png'
 import './ScapeRooms.css';
-import cueva from '../Assets/imagesHero/cueva.png'
 
 export const ScapeRooms = () => {
     const [mostrarCiudades, setMostrarCiudades] = useState(false);
@@ -268,7 +267,7 @@ export const ScapeRooms = () => {
                             </div>
 
                             <div className="precio-y-reserva">
-                                <p id = "reserva-ahora">RESERVA AHORA ➡</p>
+                                <a href="book"><p id = "reserva-ahora">RESERVA AHORA ➡</p></a>
                                 <p>15€ / Persona</p>
                             </div>
                         </div>

@@ -521,6 +521,7 @@ header {
 .lista-scaperooms {
     display: flex;
     flex-flow: row wrap;
+    
     justify-content: space-between;
     align-content: center;
     align-items: center;

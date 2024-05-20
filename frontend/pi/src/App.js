@@ -6,6 +6,8 @@ import ScapeRooms from './Components/ScapeRooms/ScapeRooms';
 import Contact from './Components/Contact/Contact';
 import Login from './Components/Login/Login';
 import Login2 from './Components/Login/Login2';
+import Book from './Components/Book/Book';
+import Perfil from './Components/Perfil/Perfil';
 import './App.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/login2" element={<Login2/>} />
+        <Route path="/book" element={<Book/>} />
+        <Route path="/perfil" element={<Perfil/>} />
       </Routes>
     </Router>
   );
