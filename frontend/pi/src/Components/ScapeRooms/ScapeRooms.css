@@ -461,7 +461,7 @@ header {
 }
 
 #rectangulo-ubicacion {
-    background-color: #EC7063;
+    background-color: #e7edef;
     width: 14vw;
     height: 3em;
     text-align: center;
@@ -471,7 +471,7 @@ header {
 }
 
 #rectangulo-dificultad {
-    background-color: #EC7063;
+    background-color: #e7edef;
     width: 14vw;
     height: 3em;
     text-align: center;
@@ -481,7 +481,7 @@ header {
 }
 
 #rectangulo-tematica {
-    background-color: #EC7063;
+    background-color: #e7edef;
     width: 14vw;
     height: 3em;
     text-align: center;
@@ -490,8 +490,12 @@ header {
     cursor: pointer;
 }
 
+.ciudades select, .nivel-dificultad select, .lista-tematicas select {
+    width: 14vw;
+    height: 3em;
+}
 .buscar {
-    background-color: #EC7063;
+    background-color: #e7edef;
     width: 4vw;
     height: 3em;
     text-align: center;
@@ -511,11 +515,11 @@ header {
     align-items: center;
 
     width: 100vw;
-    height: 170vh;
+    height: fit-content;
 
     /* background-color:grey; */
     margin-top: 20vh;
-    margin-bottom: -17vh;
+    margin-bottom: 5vh;
 }
 
 .lista-scaperooms {
@@ -662,3 +666,4 @@ header {
     font-weight: 500;
     cursor: pointer;
 }
+

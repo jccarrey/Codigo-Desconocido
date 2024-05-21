@@ -23,7 +23,9 @@ export const ScapeRooms = () => {
     const handleSignInClick = () => {
         window.location.href = '#';
     }
-
+    const handleSelectClick = (event) => {
+        event.stopPropagation();
+    };
     return (
         <div className='container'>
             <header role="banner">
@@ -72,11 +74,11 @@ export const ScapeRooms = () => {
                             <p id="rectangulo-ubicacion">Ubicación</p>
                             {mostrarCiudades && (
                                 <div className="ciudades">
-                                    <ul>
-                                        <li>Ciudad 1</li>
-                                        <li>Ciudad 2</li>
-                                        <li>Ciudad 3</li>
-                                    </ul>
+                                    <select onClick={handleSelectClick}>
+                                        <option value="ciudad1">Ciudad 1</option>
+                                        <option value="ciudad2">Ciudad 2</option>
+                                        <option value="ciudad3">Ciudad 3</option>
+                                    </select>
                                 </div>
                             )}
                         </div>
@@ -85,11 +87,11 @@ export const ScapeRooms = () => {
                             <p id="rectangulo-dificultad">Dificultad</p>
                             {mostrarDificultad && (
                                 <div className="nivel-dificultad">
-                                    <ul>
-                                        <li>Fácil</li>
-                                        <li>Intermedio</li>
-                                        <li>Difícil</li>
-                                    </ul>
+                                    <select onClick={handleSelectClick}>
+                                        <option value="facil">Fácil</option>
+                                        <option value="intermedio">Intermedio</option>
+                                        <option value="dificil">Difícil</option>
+                                    </select>
                                 </div>
                             )}
                         </div>
@@ -98,11 +100,11 @@ export const ScapeRooms = () => {
                             <p id="rectangulo-tematica">Temáticas</p>
                             {mostrarTematicas && (
                                 <div className="lista-tematicas">
-                                    <ul>
-                                        <li>Temática 1</li>
-                                        <li>Temática 2</li>
-                                        <li>Temática 3</li>
-                                    </ul>
+                                    <select onClick={handleSelectClick}>
+                                        <option value="tematica1">Temática 1</option>
+                                        <option value="tematica2">Temática 2</option>
+                                        <option value="tematica3">Temática 3</option>
+                                    </select>
                                 </div>
                             )}
                         </div>

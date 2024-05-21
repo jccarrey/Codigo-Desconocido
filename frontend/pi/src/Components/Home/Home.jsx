@@ -175,13 +175,13 @@ export const Home = () => {
                         <a href="index" className="links">
                             <p>Home</p>
                         </a>
-                        <a href="about" className="links">
+                        <a href="sobrenosotros" className="links">
                             <p>Sobre Nosotros</p>
                         </a>
-                        <a href="shop" className="links">
+                        <a href="scaperooms" className="links">
                             <p>Scape Rooms</p>
                         </a>
-                        <a href="contact" className="links">
+                        <a href="contacto" className="links">
                             <p>Contacto</p>
                         </a>
                     </div>

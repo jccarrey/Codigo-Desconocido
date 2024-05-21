@@ -301,8 +301,13 @@ header {
     width: 6em;
     height: 2em;
     /* background-color: #EC7063; */
-    margin-top: 2.5em;
+    margin-top: 2em;
     color: var(--secondary-color);   
+
+    font-size: clamp(0.95rem, 0.879rem + 0.19vw, 1.05rem);
+    font-weight: 600;
+    list-style: none;
+    font-family: Bahnschrift, "sans serif";
 }
 
 .icono-perfil svg {
