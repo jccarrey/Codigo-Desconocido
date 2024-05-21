@@ -20,7 +20,7 @@ class ConnectionMongoDB:
             if mongoClient.admin.command('ismaster')['ismaster']:
                 return "Connected to the MongoDB Server!"
         except OperationFailure:
-            return ("Database not found.")
+            return (self.db+"Database not found")
         except ServerSelectionTimeoutError:
             return ("MongoDB Server is down.")
 
