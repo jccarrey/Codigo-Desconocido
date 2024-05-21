@@ -44,11 +44,11 @@ export const Home = () => {
             </header>
 
             <div id="hero">
-                <div className="green">
+                <div className="primera-linea-hero">
                     <p data-value="CODIGO" className="hackletters">CODIGO</p>
                 </div>
 
-                <div className="haven">
+                <div className="segunda-linea-hero">
                     <p data-value="DESCONOCIDO" className="hackletters">DESCONOCIDO</p>
                 </div>
 

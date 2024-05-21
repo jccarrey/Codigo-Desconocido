@@ -75,7 +75,7 @@ header {
 .list-nav li a::after {
     content: "";
     position: absolute;
-    background-color: white;
+    background-color: var(--secondary-color);
     height: 3px;
     width: 0;
     left: 0;
@@ -84,7 +84,7 @@ header {
 }
 
 .list-nav li a:hover {
-    color: white;
+    color: var(--secondary-color);
 }
 
 .list-nav li a:hover::after {
@@ -100,7 +100,7 @@ header {
 }
 
 .list-nav li a.active {
-    color: #EC7063;
+    color: var(--terciary-color);
 }
 
 .list-nav li a.active::after {
@@ -128,22 +128,20 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    /* background-attachment: fixed; */
-
 }
 
 
 /*----------------- TEXTO 1 -----------------*/
 
 
-.green {
+.primera-linea-hero {
     position: absolute;
     width: 35%;
     top: 36%;
     left: 47%;
     transform: translate(-50%, -50%);
 
-    color: white;
+    color: var(--secondary-color);
     font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
     font-weight: 400;
     font-family: 'Bad Signal';
@@ -156,14 +154,14 @@ header {
 /*----------------- TEXTO 2 -----------------*/
 
 
-.haven {
+.segunda-linea-hero {
     position: absolute;
     width: 20%;
     top: 51%;
     left: 55%;
     transform: translate(-50%, -50%);
 
-    color: white;
+    color: var(--secondary-color);
     font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
     font-weight: 400;
     font-family: 'Bad Signal';
@@ -184,7 +182,7 @@ header {
     width: 1px;
     height: 100px;
     background-color: transparent;
-    color: white;
+    color: var(--secondary-color);
     animation: fadeIn 2s ease-in-out forwards;
 }
 

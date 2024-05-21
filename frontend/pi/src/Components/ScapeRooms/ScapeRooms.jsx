@@ -45,12 +45,12 @@ export const ScapeRooms = () => {
             </header>
 
             <div id="hero-scaperooms">
-                <div className="green">
-                    <p data-value="CODIGO" className="hackletters">SALAS DE</p>
+                <div className="primera-linea-hero">
+                    <p>SALAS DE</p>
                 </div>
 
-                <div className="haven">
-                    <p data-value="DESCONOCIDO" className="hackletters">SCAPEROOMS</p>
+                <div className="segunda-linea-hero">
+                    <p>SCAPEROOMS</p>
                 </div>
 
                 <div className="scroll-down">

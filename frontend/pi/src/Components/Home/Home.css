@@ -120,7 +120,7 @@ body {
     line-height: 1;
 }
 
-ol,
+ol, 
 ul {
     list-style: none;
 }
@@ -156,8 +156,8 @@ body {
 
 :root {
     --main-color: black;
-    --secondary-color: #00623c;
-    --terciary-color: #b4e4ff
+    --secondary-color: white;
+    --terciary-color: #EC7063
 }
 
 body {
@@ -251,7 +251,7 @@ header {
 .list-nav li a::after {
     content: "";
     position: absolute;
-    background-color: white;
+    background-color: var(--secondary-color);
     height: 3px;
     width: 0;
     left: 0;
@@ -260,7 +260,7 @@ header {
 }
 
 .list-nav li a:hover {
-    color: white;
+    color: var(--secondary-color);
 }
 
 .list-nav li a:hover::after {
@@ -270,13 +270,13 @@ header {
 .link {
     position: relative;
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color);
     letter-spacing: 0.5px;
     padding: 0 6px;
 }
 
 .list-nav li a.active {
-    color: #EC7063;
+    color: var(--terciary-color);
 }
 
 .list-nav li a.active::after {
@@ -300,7 +300,7 @@ header {
     width: 6em;
     height: 2em;
     /* background-color: #EC7063; */
-    color: white;
+    color: var(--secondary-color);
     
 }
 
@@ -334,14 +334,14 @@ header {
 /*----------------- TEXTO 1 -----------------*/
 
 
-.green {
+.primera-linea-hero {
     position: absolute;
     width: 17%;
     top: 36%;
     left: 47%;
     transform: translate(-50%, -50%);
 
-    color: white;
+    color: var(--secondary-color);
     font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
     font-weight: 600;
     font-family: 'Bad Signal';
@@ -354,14 +354,14 @@ header {
 /*----------------- TEXTO 2 -----------------*/
 
 
-.haven {
+.segunda-linea-hero {
     position: absolute;
     width: 20%;
     top: 49%;
     left: 55%;
     transform: translate(-50%, -50%);
 
-    color: white;
+    color: var(--secondary-color);
     font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
     font-weight: 600;
     font-family: 'Bad Signal';
@@ -382,7 +382,7 @@ header {
     width: 1px;
     height: 100px;
     background-color: transparent;
-    color: white;
+    color: var(--secondary-color);
     animation: fadeIn 2s ease-in-out forwards;
 }
 
@@ -482,7 +482,7 @@ header {
 
 .text-project h3 {
     font-size: clamp(1.2rem, 0.629rem + 1.524vw, 2rem);
-    color: #EC7063;
+    color: var(--terciary-color);
     font-weight: 600;
     font-family: Bahnschrift, "sans serif";
     margin-bottom: 1vh;
@@ -505,7 +505,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
 
-    background-color: #EC7063;
+    background-color: var(--terciary-color);
     margin-top: 4.5vh;
 }
 
@@ -561,7 +561,7 @@ header {
 
 .text-que-hacer h3 {
     font-size: clamp(1.2rem, 0.629rem + 1.524vw, 2rem);
-    color: #EC7063;
+    color: var(--terciary-color);
     font-weight: 600;
     font-family: Bahnschrift, "sans serif";
     margin-bottom: 1vh;
@@ -569,7 +569,7 @@ header {
 
 .text-que-hacer h2 {
     font-size: clamp(1.8rem, 1.3rem + 1.333vw, 2.5rem);
-    color: black;
+    color: var(--main-color);
     font-weight: 600;
     font-family: Bahnschrift, "sans serif";
     margin-bottom: 5vh;
@@ -619,7 +619,7 @@ header {
 
 .text-section-3 p {
     font-size: clamp(1.4rem, 1.186rem + 0.571vw, 1.7rem);
-    color: white;
+    color: var(--secondary-color);
 }
 
 .section-4 {
@@ -633,7 +633,6 @@ header {
     height: fit-content;
 
     margin-top: 5vh;
-    /* background-color: rgb(231, 61, 89); */
     margin-bottom: 12vh;
 }
 
@@ -647,13 +646,12 @@ header {
 
     width: 80vw;
     height: fit-content;
-
-    /* background-color: aqua; */
 }
 
 .text-our-best-scaperooms {
     display: flex;
     flex-flow: column nowrap;
+
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -661,7 +659,6 @@ header {
     width: 75em;
     height: fit-content;
 
-    /* background-color: #fff; */
 }
 
 .text-our-best-scaperooms p {
@@ -673,7 +670,7 @@ header {
 
 .text-our-best-scaperooms h3 {
     font-size: clamp(1.2rem, 0.629rem + 1.524vw, 2rem);
-    color: #EC7063;
+    color: var(--terciary-color);
     font-weight: 600;
     font-family: Bahnschrift, "sans serif";
     margin-bottom: 1vh;
@@ -681,25 +678,13 @@ header {
 
 .text-our-best-scaperooms h2 {
     font-size: clamp(1.8rem, 1.3rem + 1.333vw, 2.5rem);
-    color: black;
+    color: var(--main-color);
     font-weight: 600;
     font-family: Bahnschrift, "sans serif";
     margin-bottom: 5vh;
 }
 
 .galeria {
-    /* display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: #EC7063;
-
-    width: 100em;
-    height: fit-content;
-
-    margin-top: 10vh; */
     display: flex;
     animation: scroll 20s linear infinite;
     padding: 0 50px;
@@ -729,14 +714,14 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
+    
     width: 100vw;
     height: fit-content;
 
-    color: white;
-    background-color: black;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
 
     margin-top: 30vh;
-    /* border-top: 1px solid white; */
 }
 
 .contenedor-footer-top {
@@ -746,7 +731,6 @@ footer {
 
     width: 100vw;
     height: fit-content;
-    /* background-color: #F0B460; */
 
     margin-top: 6vh;
 }
@@ -756,7 +740,6 @@ footer {
     flex-flow: row nowrap;
 
     width: 18%;
-    /* background-color: green; */
 
     justify-content: center;
     align-items: center;
@@ -809,7 +792,7 @@ footer {
 
 .links {
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color);
 }
 
 .links svg {
@@ -824,7 +807,7 @@ footer {
     align-items: center;
     align-content: center;
 
-    border-top: 1px solid white;
+    border-top: 1px solid var(--secondary-color);
     margin-top: 2vh;
     margin-left: 11.8vw;
 }

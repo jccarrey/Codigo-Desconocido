@@ -29,12 +29,12 @@ export const Book = () => {
             </header>
 
             <div id="hero-book">
-                <div className="green">
-                    <p data-value="CODIGO" className="hackletters">RESERVA DE</p>
+                <div className="primera-linea-hero">
+                    <p>RESERVA DE</p>
                 </div>
 
-                <div className="haven">
-                    <p data-value="DESCONOCIDO" className="hackletters">SCAPEROOMS</p>
+                <div className="segunda-linea-hero">
+                    <p>SCAPEROOMS</p>
                 </div>
 
                 <div className="scroll-down">
@@ -58,10 +58,10 @@ export const Book = () => {
                         <div className="hora-book">
                             <p>Hora:</p>
                             <select name="" id="">
-                                <option value="">s</option>
-                                <option value="">s</option>
-                                <option value="">s</option>
-                                <option value="">s</option>
+                                <option value="">19:00</option>
+                                <option value="">18:30</option>
+                                <option value="">18:00</option>
+                                <option value="">17:30</option>
                             </select>
                         </div>
                         <div className="dificultad-book">
