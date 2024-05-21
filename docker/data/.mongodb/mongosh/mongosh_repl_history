@@ -1,6 +1,8 @@
 db.bookings.find()
 use codigodesconocido
 db.bookings.find()
+use codigodesconocido
+db.bookings.find()
 db.escaperooms.find()
 db.escaperroms.find()
 db.clients.find()
