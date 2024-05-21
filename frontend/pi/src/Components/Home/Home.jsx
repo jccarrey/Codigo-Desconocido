@@ -32,7 +32,6 @@ export const Home = () => {
                         <li className="list-nav-item"><a href="sobrenosotros" className="link">SOBRE NOSOTROS</a></li>
                         <li className="list-nav-item"><a href="scaperooms" className="link">SCAPE ROOMS</a></li>
                         <li className="list-nav-item"><a href="contacto" className="link">CONTACTO</a></li>
-
                     </ul>
                 </nav>
                 <div className="icono-perfil">

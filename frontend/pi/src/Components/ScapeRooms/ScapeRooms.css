@@ -156,8 +156,8 @@ body {
 
 :root {
     --main-color: black;
-    --secondary-color: #00623c;
-    --terciary-color: #b4e4ff
+    --secondary-color: white;
+    --terciary-color: #EC7063;
 }
 
 body {

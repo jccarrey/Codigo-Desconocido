@@ -226,6 +226,7 @@ header {
 
     font-weight: 300;
     margin-top: 4.5vh;
+    padding-left: 5em;
 }
 
 .list-nav {
@@ -300,18 +301,18 @@ header {
     width: 6em;
     height: 2em;
     /* background-color: #EC7063; */
-    color: var(--secondary-color);
-    
+    margin-top: 2.5em;
+    color: var(--secondary-color);   
 }
 
-.icono-perfil li {
-
-    list-style: none;
+.icono-perfil svg {
+    fill: var(--secondary-color); /* Cambia esto al color que prefieras */
+    width: 20px;
+    height: 20px;
+    margin-right: .4em;
+    /* padding-right: 2px; */
 }
 
-.icono-perfil a {
-    text-decoration: none;
-}
 
 /* ------------------------------------ HERO ------------------------------------ */
 
