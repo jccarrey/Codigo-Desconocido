@@ -289,7 +289,29 @@ header {
     display: none;
 }
 
+.icono-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    margin-top: 3vh;
+    margin-right: 2vw;
+
+    width: 6em;
+    height: 2em;
+    /* background-color: #EC7063; */
+    color: white;
+    
+}
+
+.icono-perfil li {
+
+    list-style: none;
+}
+
+.icono-perfil a {
+    text-decoration: none;
+}
 
 /* ------------------------------------ HERO ------------------------------------ */
 
@@ -612,6 +634,7 @@ header {
 
     margin-top: 5vh;
     /* background-color: rgb(231, 61, 89); */
+    margin-bottom: 12vh;
 }
 
 .our-best-scaperooms {
@@ -697,6 +720,123 @@ header {
     overflow: hidden;
 }
 
+/* ------------------------------ FOOTER ------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: fit-content;
+
+    color: white;
+    background-color: black;
+
+    margin-top: 30vh;
+    /* border-top: 1px solid white; */
+}
+
+.contenedor-footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+    /* background-color: #F0B460; */
+
+    margin-top: 6vh;
+}
+
+.logo-footer {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 18%;
+    /* background-color: green; */
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.logo-footer img {
+    width: 40%;
+}
+
+.pages h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.pages p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.policies h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.policies p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.social-media {
+    margin-right: 10vw;
+}
+
+.social-media h3 {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+}
+
+.social-media p {
+    font-size: .8rem;
+    margin-bottom: 2.2vh;
+}
+
+.imagen-social-media {
+    width: 1.4vw;
+    margin-right: .5vw;
+    background-color: aliceblue;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+}
+
+.links svg {
+    margin-right: 1em;
+}
+
+.contenedor-footer-bottom {
+    width: 72vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    border-top: 1px solid white;
+    margin-top: 2vh;
+    margin-left: 11.8vw;
+}
+
+.contenedor-footer-bottom p {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    font-size: .8rem;
+}
+
+
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -706,4 +846,3 @@ header {
         transform: translateX(-100%);
     }
 }
-
