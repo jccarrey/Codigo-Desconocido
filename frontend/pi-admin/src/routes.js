@@ -57,7 +57,7 @@ const routes = [
   {
     type: "collapse",
     name: "Clientes",
-    key: "clientes",
+    key: "admin/clientes",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/admin/clientes",
     component: <TableCliente />,
@@ -65,7 +65,7 @@ const routes = [
   {
     type: "collapse",
     name: "Escaperooms",
-    key: "escaperooms",
+    key: "admin/escaperooms",
     icon: <Icon fontSize="small">store</Icon>,
     route: "/admin/escaperooms",
     component: <TableEscaperoom />,
@@ -73,7 +73,7 @@ const routes = [
   {
     type: "collapse",
     name: "Reservas",
-    key: "reservas",
+    key: "admin/reservas",
     icon: <Icon fontSize="small">weekend</Icon>,
     route: "/admin/reservas",
     component: <TableBookings />,
@@ -81,7 +81,7 @@ const routes = [
   {
     type: "collapse",
     name: "Perfil",
-    key: "profile",
+    key: "admin/profile",
     icon: <Icon fontSize="small">account_circle</Icon>,
     route: "/admin/profile",
     component: <Profile />,
