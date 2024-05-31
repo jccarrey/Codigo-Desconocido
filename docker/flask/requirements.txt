@@ -1,8 +1,4 @@
-Flask
-jinja2
-markupsafe
-itsdangerous
-werkzeug
-pymongo
+Flasks
 requests
 xmltodict
+pymongo

@@ -1,0 +1,10 @@
+db.newcollection.insertOne({ name: "example", value: 42 })
+use prueba
+show bookings
+show clients
+use codigodesconocido
+use admin
+use codigodesconocido
+-u root -p --authenticationDatabase admin
+-u root -p -- authenticationDatabase admin
+use admin
