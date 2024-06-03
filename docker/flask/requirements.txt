@@ -2,3 +2,4 @@ Flasks
 requests
 xmltodict
 pymongo
+flask-restx
