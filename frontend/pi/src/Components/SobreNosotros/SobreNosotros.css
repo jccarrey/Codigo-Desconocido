@@ -1,0 +1,146 @@
+/* ------------------------------------ HERO ------------------------------------ */
+
+
+
+#hero-sobrenosotros {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+
+    background-image: url(../Assets/imagesSobreNosotros/hero-sobrenosotros.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-attachment: fixed;
+
+    margin-bottom: 10vh;
+
+}
+
+
+/*----------------- TEXTO 1 -----------------*/
+
+
+.primera-linea-hero-sobrenosotros {
+    position: absolute;
+    width: 40%;
+    top: 36%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
+    font-weight: 400;
+    font-family: 'Bad Signal';
+    letter-spacing: .2em;
+    animation: fadeIn 2s ease-in-out forwards;
+
+}
+
+
+/*----------------- TEXTO 2 -----------------*/
+
+
+.segunda-linea-hero-sobrenosotros {
+    position: absolute;
+    width: 20%;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: clamp(3.5rem, 1.357rem + 5.714vw, 6.5rem);
+    font-weight: 400;
+    font-family: 'Bad Signal';
+    letter-spacing: .2em;
+    animation: fadeIn 2s ease-in-out forwards;
+
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ------------------------------------ SECTION - 1 ------------------------------------ */
+
+.section-1-sobrenosotros {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    margin-top: 10vh;
+    /* background-color: rgb(231, 61, 89); */
+    margin-bottom: 10vh;
+}
+
+.about-us {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    align-content: center;
+
+    width: 80vw;
+    height: fit-content;
+    /* background-color: pink; */
+}
+
+.text-about-us {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+
+    width: 45em;
+    height: fit-content;
+    /* background-color: rgb(138, 243, 59); */
+}
+
+
+.text-about-us p {
+    width: 45em;
+    line-height: 2.5em;
+    margin-bottom: 3vh;
+    font-size: clamp(0.85rem, 0.779rem + 0.19vw, 0.95rem);
+}
+
+
+.text-about-us h3 {
+    font-size: clamp(1.2rem, 0.629rem + 1.524vw, 2rem);
+    color: var(--terciary-color);
+    font-weight: 600;
+    font-family: Bahnschrift, "sans serif";
+    margin-bottom: 1vh;
+}
+
+.text-about-us h2 {
+    font-size: clamp(1.8rem, 1.3rem + 1.333vw, 2.5rem);
+    color: var(--main-color);
+    font-weight: 600;
+    font-family: Bahnschrift, "sans serif";
+    margin-bottom: 5vh;
+}
+
+.imagen-about-us {
+    width: 30em;
+    height: 45em;
+
+    background-image: url(../Assets/imagesSobreNosotros/imagen-1-sobre-nosotros.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-top: 2vh;
+}

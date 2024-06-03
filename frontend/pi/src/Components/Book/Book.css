@@ -108,10 +108,10 @@ header {
 }
 
 
-.abrir-menu,
+/* .abrir-menu,
 .cerrar-menu {
     display: none;
-}
+} */
 
 
 
@@ -134,11 +134,11 @@ header {
 /*----------------- TEXTO 1 -----------------*/
 
 
-.primera-linea-hero {
+.primera-linea-hero-book {
     position: absolute;
-    width: 35%;
+    width: 85%;
     top: 36%;
-    left: 47%;
+    left: 65%;
     transform: translate(-50%, -50%);
 
     color: var(--secondary-color);
@@ -154,10 +154,10 @@ header {
 /*----------------- TEXTO 2 -----------------*/
 
 
-.segunda-linea-hero {
+.segunda-linea-hero-book {
     position: absolute;
     width: 20%;
-    top: 51%;
+    top: 56%;
     left: 55%;
     transform: translate(-50%, -50%);
 
@@ -170,59 +170,6 @@ header {
 
 }
 
-
-/*----------------- SCROLL -----------------*/
-
-
-.scroll-down {
-    position: absolute;
-    left: 90%;
-    top: 90%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 100px;
-    background-color: transparent;
-    color: var(--secondary-color);
-    animation: fadeIn 2s ease-in-out forwards;
-}
-
-.scroll-down p {
-    margin-top: 4vh;
-    margin-left: 1vw;
-}
-
-.scroll-down:before {
-    content: '';
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(transparent, #fff, transparent);
-    animation: animate 2s linear infinite
-}
-
-@keyframes animate {
-    0% {
-        transform-origin: top;
-        transform: scaleY(0);
-    }
-
-    50% {
-        transform-origin: top;
-        transform: scaleY(1);
-    }
-
-    51% {
-        transform-origin: bottom;
-        transform: scaleY(1);
-    }
-
-    100% {
-        transform-origin: bottom;
-        transform: scaleY(0);
-    }
-}
 
 @keyframes fadeIn {
     0% {
@@ -246,51 +193,40 @@ header {
     align-items: center;
 
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
 
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     /* background-color: rgb(141, 190, 232); */
 }
 
 .info-booking {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 
     justify-content: space-around;
     align-content: center;
     align-items: center;
 
     width: 80vw;
-    height: 80vh;
-    
+    height: fit-content;
+
     /* background-color: coral; */
 }
 
 .scape-info-book {
     display: flex;
     flex-flow: column nowrap;
-    
+
     justify-content: space-between;
     align-content: center;
     align-items: center;
 
-    width: 25vw;
+    width: 30em;
     height: 70vh;
-    box-shadow: 0px 6px 160px -42px rgba(0,0,0,0.61);
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
     border-radius: 10px;
     /* background-color: bisque; */
-}
-
-.your-info-for-book {
-    display: flex;
-    flex-flow: row nowrap;
-    
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-
-    width: 25vw;
-    height: 70vh;
-    /* background-color: rgb(245, 188, 119); */
 }
 
 .image-scape-for-book {
@@ -304,6 +240,7 @@ header {
 
     /* background-color: pink; */
 }
+
 .calendario input[type="date"] {
     /* Estilos para el input */
     border: 1px solid #ccc;
@@ -381,39 +318,49 @@ header {
 .your-info-for-book {
     display: flex;
     flex-flow: column nowrap;
-    
+
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
 
-    width: 35vw;
+    width: 30em;
     height: 70vh;
-    box-shadow: 0px 6px 160px -42px rgba(0,0,0,0.61);
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
     border-radius: 10px;
 }
 
 .nombre-book {
     display: flex;
     flex-flow: column nowrap;
-    
+
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
+
 }
 
 .hola {
     display: flex;
     flex-flow: row nowrap;
-    
+
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
 
-    width: 80%;
+    width: 100%;
+
+    /* background-color: antiquewhite; */
 }
 
-.hola p, .caja-email-telefono p  {
-    padding-right: 9em;
+.hola p {
+    padding-right: 7em;
+    padding-bottom: 1em;
+}
+
+.caja-email-telefono p,
+.caja-email-telefono input {
+    padding-right: em;
+    margin-left: 2.5em;
     padding-bottom: 1em;
 }
 
@@ -423,36 +370,50 @@ header {
     border: 1px solid #ccc;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #f0f0f0; /* Fondo grisaceo */
-    color: #000; /* Texto negro */
-    width: 100%; /* Ocupar todo el ancho disponible */
+    background-color: #f0f0f0;
+    /* Fondo grisaceo */
+    color: #000;
+    /* Texto negro */
+    width: 80%;
+    /* Ocupar todo el ancho disponible */
 }
 
 
-.caja-email-telefono  {
+.caja-email-telefono {
     display: flex;
     flex-flow: row nowrap;
-    
+
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
 
-    width: 80%;
+    width: 100%;
+
+    /* background-color: antiquewhite; */
+    /* margin-left: 2em; */
 }
 
-.caja-email-telefono input{
+.caja-email-telefono input {
     border: 1px solid #ccc;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #f0f0f0; /* Fondo grisaceo */
-    color: #000; /* Texto negro */
-    width: 100%; /* Ocupar todo el ancho disponible */
+
+    background-color: #f0f0f0;
+    /* Fondo grisaceo */
+    color: #000;
+    /* Texto negro */
+    width: 70%;
+    /* Ocupar todo el ancho disponible */
+}
+
+.telefono-book {
+    margin-right: 3em;
 }
 
 .observaciones-book {
     display: flex;
     flex-flow: column nowrap;
-    
+
     justify-content: space-evenly;
     align-content: left;
     align-items: left;
@@ -464,25 +425,67 @@ header {
 .boton-reservar {
     display: flex;
     flex-flow: column nowrap;
-    
-    justify-content: space-evenly;
-    align-content: left;
-    align-items: left;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 
     width: 70%;
 
     cursor: pointer;
 }
 
-.boton-reservar p{
+.boton-reservar p {
     border-radius: 20px;
-    
+
     background-color: #d7d7d7;
     color: black;
 
-    width: 10vw;
+    width: 10em;
     height: 2em;
 
     line-height: 2em;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 850px) {
+    .segunda-linea-hero-book {
+        left: 37%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .segunda-linea-hero-book {
+        left: 32%;
+    }
+
+    .calendario input[type="date"] {
+        width: 13em;
+    }
+
+    .image-scape-for-book {
+        height: 35%;
+    }
+
+    .hola p {
+        padding-right: 5em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .primera-linea-hero-book {
+        left: 60%;
+    }
+
+    .segunda-linea-hero-book {
+        left: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 1199px) {
+    .scape-info-book {
+        margin-bottom: 10vh;
+    }
 }

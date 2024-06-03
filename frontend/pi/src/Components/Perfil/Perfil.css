@@ -11,7 +11,7 @@
     transition: 0.6s;
     animation: fadeIn 2s ease-in-out forwards;
 
-    background-color: rgb(205, 205, 205);
+    background-color: black;
 }
 
 
@@ -110,10 +110,10 @@
 }
 
 
-.abrir-menu,
+/* .abrir-menu,
 .cerrar-menu {
     display: none;
-}
+} */
 
 /* ---------------------------------- SECTION 1 ------------------------------- */
 
@@ -140,12 +140,12 @@
     align-content: center;
     align-items: center;
 
-    width: 80vw;
+    width: 80em;
     height: 40vh;
-    
-    box-shadow: 0px 6px 160px -42px rgba(0,0,0,0.61);
+
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
     border-radius: 10px;
-    
+
     margin-top: 10vh;
 }
 
@@ -162,18 +162,18 @@
 
 .perfil-2do-div {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 
     justify-content: space-around;
     align-content: center;
     align-items: center;
 
-    width: 80vw;
+    width: 80em;
     height: 40vh;
-    
+
     margin-top: 10vh;
 
-    box-shadow: 0px 6px 160px -42px rgba(0,0,0,0.61);
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
     border-radius: 10px;
     /* background-color: rgb(245, 212, 199); */
 }
@@ -184,9 +184,12 @@
     border: 1px solid #ccc;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #f0f0f0; /* Fondo grisaceo */
-    color: #000; /* Texto negro */
-    width: 100%; /* Ocupar todo el ancho disponible */
+    background-color: #f0f0f0;
+    /* Fondo grisaceo */
+    color: #000;
+    /* Texto negro */
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
     margin-top: 10px;
 }
 
@@ -199,4 +202,304 @@
     min-width: 40em;
     min-height: 10em;
     margin-top: 10px;
+}
+
+.section-2-info-user-perfil {
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: fit-content;
+
+    /* background-color: rgb(238, 243, 243); */
+}
+
+.amigos-1er-div {
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    width: 80em;
+    height: 45vh;
+
+    margin-top: 10vh;
+}
+
+.amigos-2do-div {
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    width: 80em;
+    height: 45vh;
+
+    margin-top: 10vh;
+}
+
+.amigos-3er-div {
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    width: 80em;
+    height: 45vh;
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.titulo-1er-div-amigos {
+    display: flex;
+    flex-flow: row;
+
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    /* background-color: #EC7063; */
+
+    width: 80em;
+    height: 2em;
+}
+
+.titulo-2do-div-amigos {
+    display: flex;
+    flex-flow: row;
+
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    /* background-color: #EC7063; */
+
+    width: 80em;
+    height: 2em;
+}
+
+.titulo-3er-div-amigos {
+    display: flex;
+    flex-flow: row;
+
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    /* background-color: #EC7063; */
+
+    width: 80em;
+    height: 2em;
+}
+
+.segundo-div-amigos {
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+    width: 80em;
+    height: 40vh;
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+}
+
+.tercer-div-amigos {
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+    width: 80em;
+    height: 40vh;
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+}
+.foto-amigo {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+
+    background-image: url(../Assets/imagesBookNow/image-scape-room-asesino-book.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.solicitud-amigo {
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+
+    width: 80em;
+    height: 40vh;
+    box-shadow: 0px 6px 160px -42px rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+}
+
+.info-amigo {
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
+    /* background-color: #bb5959; */
+    width: 20em;
+    height: 35vh;
+}
+
+.chat {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    width: 10em;
+    height: 2em;
+
+    border-radius: 5px;
+    border: 3px solid green;
+    cursor: pointer;
+    margin-bottom: 2vh;
+}
+
+.enviar-solicitud {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    width: 10em;
+    height: 2em;
+
+    border-radius: 5px;
+    border: 3px solid green;
+    cursor: pointer;
+    margin-bottom: 2vh;
+}
+
+.eliminar {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    width: 10em;
+    height: 2em;
+
+    border-radius: 5px;
+    border: 3px solid red;
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 730px) {
+
+    .perfil-2do-div {
+        height: 50vh;
+    }
+
+    .descripcion-user {
+        margin-top: 4em;
+    }
+
+    .foto-user {
+        width: 15em;
+        height: 15em;
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .foto-user {
+        width: 10em;
+        height: 10em;
+    }
+
+    .perfil-1er-div {
+        height: 25vh;
+    }
+
+    .descripcion-user textarea {
+        min-width: 28em;
+    }
+}
+
+@media only screen and (max-width: 539px) {
+    .perfil-2do-div {
+        height: 60vh;
+    }
+}
+
+/* Chat icon styling */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.chat-icon i {
+    font-size: 24px;
+}
+
+/* Chat window styling */
+.chat-window {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 300px;
+    max-width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.chat-footer {
+    background-color: #007bff;
 }

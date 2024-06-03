@@ -284,10 +284,10 @@ header {
 }
 
 
-.abrir-menu,
+/* .abrir-menu,
 .cerrar-menu {
     display: none;
-}
+} */
 
 
 
@@ -298,13 +298,15 @@ header {
 #hero-scaperooms {
     position: relative;
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
 
     background-image: url(../Assets/imagesScapeRooms/hero-scaperooms.png);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: contain;
-    /* background-attachment: fixed; */
+    background-size: cover;
+    background-attachment: fixed;
+
+    margin-bottom: 10vh;
 
 }
 
@@ -312,11 +314,11 @@ header {
 /*----------------- TEXTO 1 -----------------*/
 
 
-.primera-linea-hero {
+.primera-linea-hero-scaperooms {
     position: absolute;
-    width: 30%;
+    width: 70%;
     top: 36%;
-    left: 47%;
+    left: 67%;
     transform: translate(-50%, -50%);
 
     color: white;
@@ -332,10 +334,10 @@ header {
 /*----------------- TEXTO 2 -----------------*/
 
 
-.segunda-linea-hero {
+.segunda-linea-hero-scaperooms {
     position: absolute;
     width: 20%;
-    top: 51%;
+    top: 55%;
     left: 55%;
     transform: translate(-50%, -50%);
 
@@ -348,59 +350,6 @@ header {
 
 }
 
-
-/*----------------- SCROLL -----------------*/
-
-
-.scroll-down {
-    position: absolute;
-    left: 90%;
-    top: 90%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 100px;
-    background-color: transparent;
-    color: white;
-    animation: fadeIn 2s ease-in-out forwards;
-}
-
-.scroll-down p {
-    margin-top: 4vh;
-    margin-left: 1vw;
-}
-
-.scroll-down:before {
-    content: '';
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(transparent, #fff, transparent);
-    animation: animate 2s linear infinite
-}
-
-@keyframes animate {
-    0% {
-        transform-origin: top;
-        transform: scaleY(0);
-    }
-
-    50% {
-        transform-origin: top;
-        transform: scaleY(1);
-    }
-
-    51% {
-        transform-origin: bottom;
-        transform: scaleY(1);
-    }
-
-    100% {
-        transform-origin: bottom;
-        transform: scaleY(0);
-    }
-}
 
 @keyframes fadeIn {
     0% {
@@ -431,8 +380,10 @@ header {
 .rectangulo-1-filtros-scaperooms {
     display: flex;
     flex-flow: row wrap;
+
     justify-content: space-between;
     align-content: center;
+    align-items: center;
 
     width: 80vw;
     height: fit-content;
@@ -443,7 +394,7 @@ header {
     color: black;
     font-weight: 600;
     font-family: Bahnschrift, "sans serif";
-    margin-bottom: 5vh;
+    /* margin-bottom: 5vh; */
 }
 
 .filtros-scaperooms {
@@ -455,14 +406,14 @@ header {
     align-content: center;
 
     width: 80vw;
-    height: 13vh;
+    height: 25vh;
 
-    /* background-color: #bbb; */
+    /* background-color: antiquewhite; */
 }
 
 #rectangulo-ubicacion {
     background-color: #e7edef;
-    width: 14vw;
+    width: 12.5em;
     height: 3em;
     text-align: center;
     line-height: 3em;
@@ -472,7 +423,7 @@ header {
 
 #rectangulo-dificultad {
     background-color: #e7edef;
-    width: 14vw;
+    width: 12.5em;
     height: 3em;
     text-align: center;
     line-height: 3em;
@@ -482,7 +433,7 @@ header {
 
 #rectangulo-tematica {
     background-color: #e7edef;
-    width: 14vw;
+    width: 12.5em;
     height: 3em;
     text-align: center;
     line-height: 3em;
@@ -496,7 +447,7 @@ header {
 }
 .buscar {
     background-color: #e7edef;
-    width: 4vw;
+    width: 3em;
     height: 3em;
     text-align: center;
     line-height: 3em;
@@ -518,7 +469,7 @@ header {
     height: fit-content;
 
     /* background-color:grey; */
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
@@ -544,7 +495,7 @@ header {
     align-items: center;
     align-content: center;
 
-    width: 25vw;
+    width: 30em ;
     height: 60vh;
 
     background-color: #e7edef;
@@ -665,5 +616,52 @@ header {
     font-size: clamp(0.76rem, 0.617rem + 0.381vw, 0.96rem);
     font-weight: 500;
     cursor: pointer;
+    color: var(--main-color);
 }
 
+#reserva-ahora:hover {
+    font-weight: 700;
+    transition: 0.3s;
+}
+.precio-y-reserva a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 850px) {
+
+
+    .segunda-linea-hero-scaperooms {
+        left: 37%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .segunda-linea-hero-scaperooms {
+        left: 32%;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+    .filtros-scaperooms {
+        flex-flow: column nowrap;
+    }
+
+    #como {
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    .section-1-scaperooms {
+        height: 35vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .primera-linea-hero-scaperooms {
+        left: 60%;
+    }
+
+    .segunda-linea-hero-scaperooms  {
+        left: 25%;
+    }
+}
