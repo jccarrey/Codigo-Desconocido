@@ -6,8 +6,8 @@ from pymongo.errors import ServerSelectionTimeoutError, OperationFailure
 from bson import ObjectId
 
 app = Flask(__name__)
-api = Api(app, version='1.0', title='Escape Room API',
-          description='A simple API to manage clients, escape rooms, and bookings',
+api = Api(app, version='1.0', title='CodigoDesconocido API',
+          description='API to manage clients, escape rooms, and bookings',
           )
 
 ns_clients = api.namespace('clients', description='Operations related to clients')
@@ -21,7 +21,6 @@ client_model = api.model('Client', {
     'avatar': fields.String(description='The client avatar'),
     'friends': fields.List(fields.String, description='List of friend IDs')
 })
-
 
 escaperoom_model = api.model('EscapeRoom', {
     'name': fields.String(required=True, description='The escape room name'),
@@ -140,9 +139,21 @@ class EscapeRoomList(Resource):
     def get(self):
         if db is None:
             api.abort(500, "Failed to connect to the database")
-        escaperooms = list(db.escaperooms.find())
+
+        # Obtener parámetros de paginación de la consulta
+        page = int(request.args.get('page', 1))  # Página actual, por defecto 1
+        per_page = int(request.args.get('per_page', 10))  # Tamaño de página, por defecto 10
+
+        # Calcular desplazamiento (offset) y límite (limit) para la consulta
+        offset = (page - 1) * per_page
+        limit = per_page
+
+        # Obtener los documentos paginados de la colección
+        escaperooms = list(db.escaperooms.find().skip(offset).limit(limit))
         for escaperoom in escaperooms:
             escaperoom['_id'] = str(escaperoom['_id'])
+
+        # Devolver la lista de escape rooms paginada
         return escaperooms, 200
 
     @ns_escaperooms.doc('create_escaperoom')
