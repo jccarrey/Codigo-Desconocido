@@ -1,4 +1,4 @@
-import json
+import json, logging
 from flask import Flask, request, jsonify
 from flask_restx import Api, Resource, fields
 from pymongo import MongoClient
@@ -9,6 +9,19 @@ app = Flask(__name__)
 api = Api(app, version='1.0', title='CodigoDesconocido API',
           description='API to manage clients, escape rooms, and bookings',
           )
+
+# Agregar encabezados CORS a todas las respuestas
+@app.after_request
+def add_cors_headers(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
+
+# Manejador de solicitud OPTIONS para todas las rutas
+@app.route('/<path:path>', methods=['OPTIONS'])
+def handle_options(path):
+    return jsonify({'status': 'ok'}), 200
 
 ns_clients = api.namespace('clients', description='Operations related to clients')
 ns_escaperooms = api.namespace('escaperooms', description='Operations related to escape rooms')
@@ -26,7 +39,12 @@ escaperoom_model = api.model('EscapeRoom', {
     'name': fields.String(required=True, description='The escape room name'),
     'description': fields.String(required=True, description='The escape room description'),
     'schedules': fields.List(fields.String, description='List of available schedules'),
-    'open_days': fields.List(fields.String, description='List of open days')
+    'open_days': fields.List(fields.String, description='List of open days'),
+    'price': fields.Float(description='The price of the escape room'),
+    'min_players': fields.Integer(description='The minimum number of players'),
+    'max_players': fields.Integer(description='The maximum number of players'),
+    'difficulty': fields.String(enum=['advanced', 'easy', 'intermediate'], description='The difficulty level of the escape room'),
+    'photo': fields.Raw(description='Binary data of the escape room photo')
 })
 
 booking_model = api.model('Booking', {
@@ -76,10 +94,45 @@ class ClientList(Resource):
     def get(self):
         if db is None:
             api.abort(500, "Failed to connect to the database")
-        clients = list(db.clients.find())
-        for client in clients:
-            client['_id'] = str(client['_id'])
-        return clients, 200
+        
+        try:
+            # Obtener parámetros de paginación de la consulta
+            page = int(request.args.get('page', 1))  # Página actual, por defecto 1
+            per_page = int(request.args.get('per_page', 10))  # Tamaño de página, por defecto 10
+        except ValueError as e:
+            logging.error(f"ValueError: {e}")
+            api.abort(400, "Invalid pagination parameters")
+
+        # Calcular desplazamiento (offset) y límite (limit) para la consulta
+        offset = (page - 1) * per_page
+        limit = per_page
+        
+        try:
+            clients = list(db.clients.find().skip(offset).limit(limit))
+            for client in clients:
+                friends_ids = client.get('friends', [])
+                friends = []  # Inicializa la lista de amigos
+                for fid in friends_ids:
+                    try:
+                        # Verifica que fid sea un ObjectId válido antes de usarlo
+                        if ObjectId.is_valid(fid):
+                            friend = db.clients.find_one({"_id": ObjectId(fid)})
+                            if friend:
+                                friend['_id'] = str(friend['_id'])
+                                friends.append(friend['name'])  # Agrega el ID del amigo a la lista
+                            else:
+                                logging.warning(f"No friend found with id {fid}")
+                        else:
+                            logging.warning(f"Invalid ObjectId: {fid}")
+                    except Exception as e:
+                        logging.error(f"Error retrieving friend with id {fid}: {e}")
+                        continue  # Si hay un error, simplemente no agregar el amigo
+                client['friends'] = friends
+                client['_id'] = str(client['_id'])
+            return clients, 200
+        except Exception as e:
+            logging.error(f"Exception: {e}")
+            api.abort(500, f"An error occurred while retrieving clients: {str(e)}")
 
     @ns_clients.doc('create_client')
     @ns_clients.expect(client_model)
@@ -128,6 +181,29 @@ class Client(Resource):
         result = db.clients.delete_one({"_id": ObjectId(id)})
         if result.deleted_count > 0:
             return '', 204
+        else:
+            api.abort(404, "Client not found")
+            
+# Definición del nuevo recurso para la lista de amigos
+@ns_clients.route('/<id>/friends')
+@ns_clients.response(404, 'Client not found')
+@ns_clients.param('id', 'The client identifier')
+class ClientFriends(Resource):
+    @ns_clients.doc('get_client_friends')
+    @ns_clients.marshal_list_with(client_model)
+    def get(self, id):
+        if db is None:
+            api.abort(500, "Failed to connect to the database")
+        client = db.clients.find_one({"_id": ObjectId(id)})
+        if client:
+            friends_ids = client.get('friends', [])
+            friends = []  # Inicializa la lista de amigos
+            for fid in friends_ids:
+                friend = db.clients.find_one({"_id": ObjectId(fid)})
+                if friend:
+                    friend['_id'] = str(friend['_id'])
+                    friends.append(friend)  # Agrega el amigo a la lista
+            return friends, 200
         else:
             api.abort(404, "Client not found")
 
